@@ -1,0 +1,30 @@
+<?php
+$urlInterface = \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Framework\UrlInterface');
+$urlInterface->getCurrentUrl();
+?>
+<div class="share-links col-xs-12">
+    <div class="share-product-text"> <?php /* @escapeNotVerified */ echo __('Share this product') ?> </div>
+    <div class="product_socials_wrapper_inner">
+
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $urlInterface->getCurrentUrl(); ?>" target="_blank" class="facebook" title="Facebook">
+            <i class="fa fa-facebook"></i>
+        </a>
+
+
+        <a href="https://twitter.com/share?url=<?php echo $urlInterface->getCurrentUrl(); ?>" target="_blank" class="twitter" title="Twitter">
+            <i class="fa fa-twitter"></i>
+        </a>
+
+
+        <a href="https://pinterest.com/pin/create/button/?url=<?php echo $urlInterface->getCurrentUrl(); ?>" target="_blank" class="vimeo" title="vimeo">
+            <i class="fa fa-pinterest-p"></i>
+        </a>
+
+
+        <a href="https://plus.google.com/share?url=<?php echo $urlInterface->getCurrentUrl(); ?>" target="_blank" class="google-plus" title="Google plus">
+            <i class="fa fa-google-plus"></i>
+        </a>
+
+    </div>
+</div>

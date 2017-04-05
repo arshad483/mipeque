@@ -1,0 +1,64 @@
+<!--
+** Header Menu Right
+** Create date 15/02/2017
+-->
+<?php
+$full_header_width = $block->getData('full_header_width');
+$compareHeader = $block->getData('compare');
+$wishlistHeader = $block->getData('wishlist');
+$sticky_logo = $block->getConfig('cleversoftbase/header/sticky_logo');
+$logoSrc = $this->getUrl('pub/media/wysiwyg/mato/logo/', ['_secure' => $this->getRequest()->isSecure()]).$sticky_logo;
+$objectManagerlogin = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManagerlogin->get('Magento\Customer\Model\Session');
+$baseurl = $objectManagerlogin->get('Magento\Store\Model\StoreManagerInterface')->getStore(0)->getBaseUrl();
+?>
+<div class="panel wrapper">
+    <div class="header-panel <?php echo ($full_header_width == 1 ? '' : 'container')?>">
+        <div class="topbar-container">
+            <?php echo $this->getChildHtml("top.contact"); ?>
+			<?php if($customerSession->isLoggedIn()) { ?>
+				<a href="<?php echo $baseurl .'customer/account/logout'; ?>"><?php echo __('Logout'); ?></a>
+			<?php } else { ?>
+				<a href="<?php echo $baseurl .'customer/account/login'; ?>"><?php echo __('Login'); ?></a>
+				<a href="<?php echo $baseurl .'customer/account/create'; ?>"><?php echo __('Register'); ?></a>
+			<?php
+				}
+			?>
+			<a href="<?php echo $this->getUrl('wishlist') ?>">
+				<?php echo __('Wishlist') ?>
+			</a>
+            <?php echo $this->getChildHtml("currency"); ?>
+            <?php echo $this->getChildHtml("store_language"); ?>
+        </div>
+    </div>
+</div>
+<div id="zoo-sticky-header">
+    <div class="header-content <?php echo ($full_header_width == 1 ? '' : 'container')?>">
+        <div class="zoo-header-content-block logo">
+            <?php echo $this->getChildHtml("logo"); ?>
+        </div>
+        <div class="zoo-header-content-block top">
+			<div class="logo-sticky">
+				<?php if ($block->isHomePage()):?>
+                <strong>
+                    <?php else: ?>
+                    <a href="<?php echo $block->getUrl(''); ?>">
+                        <?php endif ?>
+                        <img src="<?php echo $logoSrc; ?>" width="85" height="35"/>
+                        <?php if ($block->isHomePage()):?>
+                </strong>
+				<?php else:?>
+					</a>
+				<?php endif?>
+			</div>
+            <?php echo $this->getChildHtml("main.menu"); ?>
+        </div>
+		<div class="zoo-header-content-block right">
+			<div id="header-layout-search">
+				<a href="javascript:void(0)"><span class="cs-font clever-icon-search-4"></span></a>
+			</div>
+			<?php //echo $this->getChildHtml("top.search"); ?>
+			<?php echo $this->getChildHtml("minicart"); ?>
+		</div>
+    </div>
+</div>

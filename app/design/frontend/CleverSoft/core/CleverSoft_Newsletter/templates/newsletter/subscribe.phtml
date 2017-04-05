@@ -1,0 +1,129 @@
+<?php
+/**
+ * @category    CleverSoft
+ * @package     CleverNewsletter
+ * @copyright   Copyright © 2017 CleverSoft., JSC. All Rights Reserved.
+ * @author 		ZooExtension.com
+ * @email       magento.cleversoft@gmail.com
+ */
+?>
+<?php
+$helper = $this->helper('CleverSoft\Newsletter\Helper\Data');
+$width = $helper->getCfgWidth();
+$height = $helper->getCfgHeight();
+$backgroundColor = $helper->getCfgBackgroundColor();
+$backgroundImage = $helper->getCfgBackgroundImage();
+$desc = $helper->getCfgIntro();
+$enable = $helper->getCfgEnable();
+$delay = $this->getConfig('clevernewsletter/display_options/load_after');
+if(!$delay || empty($delay) || !isset($delay)) $delay = 10000;
+else $delay = intval($delay) * 1000;
+$routeName = $block->getRequest()->getRouteName();
+?>
+<?php if ($routeName != 'ajaxcart' && $routeName != 'quickview' && $enable) { ?>
+    <div style="display: none">
+        <div id="zoo_newsletter" class="block block-subscribe clearfix">
+            <?php if($backgroundImage){?> <div class="zoo-logo-newsletter"><img src="<?php echo $this->getUrl('pub/media/wysiwyg/mato/newsletter/', ['_secure' => $this->getRequest()->isSecure()]).$backgroundImage;?>" width="auto" height="auto"/></div>  <?php }?>
+            <div class="zoo-popup-newsletter-inner">
+                <h2>
+                    <span><?php echo __('NEWSLETTER!') ?></span></strong>
+                </h2>
+                <div class="row-none">
+                    <div class="popup_message">
+                        <p class="intro">
+                            <?php echo $desc; ?>
+                        </p>
+                        <form action="<?php echo $this->getFormActionUrl() ?>" method="post"
+                              id="zoo-newsletter-validate-detail" novalidate
+                              data-mage-init='{"validation": {"errorClass": "mage-error"}}'>
+
+
+                            <div class="block-content form-groups">
+
+                                <input name="email" type="text" id="zoo-newsletter"
+                                       class="input-text required-entry validate-email"
+                                       value="<?php echo __('Your email address') ?>"
+                                       onclick="this.value=='<?php echo __('Your email address') ?>'?this.value='':''"
+                                       onblur="this.value==''?this.value='<?php echo __('Your email address') ?>':''"
+                                       data-validate="{required:true, 'validate-email':true}"/>
+                                <button type="submit"  class="btn-novetty">
+                                    <?php echo __('Subscribe') ?></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <label class="subcriper_label checkbox-filter">
+                        <input type="checkbox">
+                        <span class="checkbox-material"><span class="check"></span></span>
+                        <?php echo __('Don\'t show this popup again'); ?>
+                    </label>
+                </div>
+                <script>
+                    require([
+                        "jquery",
+                        'Magento_Ui/js/modal/modal',
+                        "js/jquery.noconflict",
+                        "jquery/jquery.cookie"
+                    ], function(  $, modal  ) {
+                        //<![CDATA[
+                        $(function () {
+                            isSuccess = $('ul.messages li.success-msg').length;
+                            subscribeFlag = $.cookie('mtNewsletterSubscribeFlag');
+                            function subsSetcookie() {
+                                $.cookie('mtNewsletterSubscribe', 'true', {
+                                    expires: 30,
+                                    path: '/'
+                                });
+                            }
+
+                            $('#zoo_newsletter .subcriper_label input').on('click', function () {
+                                if ($(this).parent().find('input:checked').length) {
+                                    subsSetcookie();
+                                } else {
+                                    $.cookie('mtNewsletterSubscribe', '', { path: '/', expires:-1 });
+                                }
+                            });
+                            $('#zoo_newsletter .input-box button.button').on('click', function () {
+                                var button = $(this);
+                                setTimeout(function () {
+                                    if (!button.parent().find('input#newsletter').hasClass('validation-failed')) {
+                                        $.cookie('mtNewsletterSubscribeFlag', 'true', {
+                                            path: '/'
+                                        });
+                                    }
+                                }, 500);
+                            });
+                            if (!(subscribeFlag && isSuccess) && !$.cookie('mtNewsletterSubscribe')) {
+                                var options = {
+                                    type: 'popup',
+                                    modalClass: 'zoo-newsletter-popup',
+                                    responsive: true
+                                };
+                                var popup = modal(options, $('#zoo_newsletter'));
+                                setTimeout(function(){
+                                    $('#zoo_newsletter').modal('openModal');
+                                },<?php echo $delay; ?>);
+
+                            } else {
+                                $.cookie('mtNewsletterSubscribe', '', { path: '/', expires:-1 });
+                                subsSetcookie();
+                            }
+                        });
+                        //]]>
+                    })
+
+                </script>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+<style>
+
+    .zoo-newsletter-popup .modal-inner-wrap{
+        max-width: <?php echo $width; ?>px;
+        max-height: <?php echo $height; ?>px;
+    }
+</style>
+
+ 

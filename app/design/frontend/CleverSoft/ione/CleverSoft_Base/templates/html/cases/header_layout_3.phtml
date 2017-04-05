@@ -1,0 +1,53 @@
+<!--
+** Header Menu Vertical Left
+** Create date 15/02/2017
+-->
+<?php
+$full_header_width = $block->getData('full_header_width');
+$compareHeader = $block->getData('compare');
+$wishlistHeader = $block->getData('wishlist');
+$sticky_logo = $block->getConfig('cleversoftbase/header/sticky_logo');
+$logoSrc = $this->getUrl('pub/media/wysiwyg/mato/logo/', ['_secure' => $this->getRequest()->isSecure()]).$sticky_logo;
+?>
+<div class="panel wrapper">
+    <div class="header-panel <?php echo ($full_header_width == 1 ? '' : 'container')?>">
+        <!--div class="topbar-container">
+            <?php //echo $this->getChildHtml("top.contact"); ?>
+            <?php //echo $this->getChildHtml("currency"); ?>
+            <?php //echo $this->getChildHtml("store_language"); ?>
+        </div-->
+    </div>
+</div>
+<div id="zoo-sticky-header">
+    <div class="header-content <?php echo ($full_header_width == 1 ? '' : '')?>">
+        <div class="zoo-header-content-block logo">
+            <?php echo $this->getChildHtml("logo"); ?>
+        </div>
+        <div class="zoo-header-content-block top">
+			<div class="logo-sticky">
+				<?php if ($block->isHomePage()):?>
+                <strong>
+                    <?php else: ?>
+                    <a href="<?php echo $block->getUrl(''); ?>">
+                        <?php endif ?>
+                        <img src="<?php echo $logoSrc; ?>" width="85" height="35"/>
+                        <?php if ($block->isHomePage()):?>
+                </strong>
+				<?php else:?>
+					</a>
+				<?php endif?>
+			</div>
+            <?php echo $this->getChildHtml("main.menu"); ?>
+        </div>
+    </div>
+	<div class="zoo-header-content-block top-fixed">
+		<div class="left">
+			<?php echo $this->getChildHtml("top.search"); ?>
+		</div>
+		<div class="right">
+			<?php echo $this->getChildHtml("minicart"); ?>
+			<?php echo $this->getChildHtml("header.links"); ?>
+			<?php echo $this->getChildHtml("custom_block"); ?>
+		</div>
+	</div>
+</div>

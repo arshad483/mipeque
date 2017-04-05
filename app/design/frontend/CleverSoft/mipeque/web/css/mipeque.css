@@ -1,0 +1,108 @@
+/*
+* Copyright © 2017 Magento. All rights reserved.
+* See COPYING.txt for license details.
+* Developer Andrew.
+* Mipeque Theme.
+* Parent: CleverSoft iOne Theme.
+*/
+body .page-wrapper .page-header.is-sticky .logo-sticky {
+  padding-top: 20px;
+}
+body .page-wrapper .page-header .header-content .zoo-header-content-block.right .minicart-wrapper .action.showcart .counter .counter-number {
+  background: #cc54a9;
+  color: #fff;
+}
+body .page-wrapper .page-header .header-content .zoo-header-content-block.right .minicart-wrapper .minicart-detail .block-title {
+  background: #cc54a9;
+}
+body .page-wrapper .zoo-wishlist,
+body .page-wrapper .zoo-compare {
+  background: transparent;
+}
+body .page-wrapper .zoo-wishlist a,
+body .page-wrapper .zoo-compare a {
+  background: transparent;
+  color: #252525;
+}
+body .page-wrapper .zoo-wishlist a span.tooltip,
+body .page-wrapper .zoo-compare a span.tooltip {
+  background: #cc54a9;
+}
+body .page-wrapper .zoo-wishlist a span.tooltip:before,
+body .page-wrapper .zoo-compare a span.tooltip:before {
+  border-left-color: #cc54a9;
+}
+body .page-wrapper .zoo-wishlist a:hover,
+body .page-wrapper .zoo-compare a:hover {
+  color: #cc54a9;
+}
+body .page-wrapper .options-slideup .zoo-quickview {
+  background: #cc54a8;
+  color: #fff;
+}
+body .page-wrapper .options-slideup .zoo-quickview:hover {
+  background: #d070ad;
+}
+body .page-wrapper #zoo-main-content .container .main_content_area .new-arrivals .zoo-product-collection01 .block .block-content .products-grid .product-items .owl-stage-outer .owl-stage .owl-item .product_hover .product-item-info .zoo-inner-product-item-info .zoo-product-image .options-slideup .zoo-quickview {
+  background: #cc54a8;
+}
+body .page-wrapper #zoo-main-content .container .main_content_area .new-arrivals .zoo-product-collection01 .block .block-content .products-grid .product-items .owl-stage-outer .owl-stage .owl-item .product_hover .product-item-info .zoo-inner-product-item-info .zoo-product-image .options-slideup .zoo-quickview:hover {
+  background: #d070ad;
+}
+body .page-wrapper #zoo-main-content .container .main_content_area .new-arrivals .zoo-product-collection01 .block .block-content .products-grid .product-items .owl-stage-outer .owl-stage .owl-item .product_hover .product-item-info .zoo-inner-product-item-info .zoo-product-image .zoo-wishlist a:hover,
+body .page-wrapper #zoo-main-content .container .main_content_area .new-arrivals .zoo-product-collection01 .block .block-content .products-grid .product-items .owl-stage-outer .owl-stage .owl-item .product_hover .product-item-info .zoo-inner-product-item-info .zoo-product-image .zoo-compare a:hover {
+  color: #cc54a9;
+}
+body .page-wrapper #zoo-main-content .container .main_content_area .slider_home .flexslider .flex-direction-nav a {
+  background: #25aae1;
+  color: #fff;
+  width: 50px;
+}
+body .page-wrapper #zoo-main-content .container .main_content_area .slider_home .flexslider .flex-direction-nav a.flex-next:before,
+body .page-wrapper #zoo-main-content .container .main_content_area .slider_home .flexslider .flex-direction-nav a.flex-prev:before {
+  font-size: 25px;
+  line-height: 50px;
+  width: 50px;
+  text-align: center;
+  color: #fff;
+}
+body .page-wrapper #zoo-main-content .container .main_content_area .slider_home .flexslider:hover .flex-direction-nav a.flex-next {
+  right: -20px;
+}
+body .page-wrapper #zoo-main-content .container .main_content_area .slider_home .flexslider:hover .flex-direction-nav a.flex-prev {
+  left: -20px;
+}
+body .page-wrapper #zoo-main-content .container .main_content_area .box-contents .wgcategory .category-item .main-content-category .description {
+  top: auto;
+  bottom: 0;
+  background: #15baec;
+}
+body .page-wrapper #zoo-main-content .container .main_content_area .box-contents .wgcategory .category-item .main-content-category .description .name-cat,
+body .page-wrapper #zoo-main-content .container .main_content_area .box-contents .wgcategory .category-item .main-content-category .description .num-product {
+  color: #fff;
+}
+body .page-wrapper .footer-copyright .container .left a:hover,
+body .page-wrapper .footer-copyright .container .right a:hover {
+  color: #cc54a9;
+}
+body .page-wrapper .page-footer .footer .footer-info .item h4,
+body .page-wrapper .page-footer .footer-bottom .footer-info .item h4 {
+  color: #25aae1;
+}
+body .page-wrapper .page-footer .footer .footer-info .item ul li a i,
+body .page-wrapper .page-footer .footer-bottom .footer-info .item ul li a i {
+  background: #252525;
+  color: #fff;
+}
+body .page-wrapper .page-footer .footer .footer-info .item ul li a:hover,
+body .page-wrapper .page-footer .footer-bottom .footer-info .item ul li a:hover {
+  color: #15baec;
+}
+body .page-wrapper .page-footer .footer .footer-info .item ul li a:hover i,
+body .page-wrapper .page-footer .footer-bottom .footer-info .item ul li a:hover i {
+  background: #15baec;
+}
+body .page-wrapper .page-footer .footer .footer-info .item.newsletter button,
+body .page-wrapper .page-footer .footer-bottom .footer-info .item.newsletter button {
+  background: #15baec;
+}

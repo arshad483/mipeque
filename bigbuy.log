@@ -1,0 +1,17 @@
+--2017-04-04 13:47:56--  ftp://bb67zM5lyRCF:*password*@www.dropshippers.com.es/files/products/csv/standard/product_2399_es.csv
+           => ‘www.dropshippers.com.es/files/products/csv/standard/.listing’
+Resolving www.dropshippers.com.es (www.dropshippers.com.es)... 91.134.149.167
+Connecting to www.dropshippers.com.es (www.dropshippers.com.es)|91.134.149.167|:21... connected.
+Logging in as bb67zM5lyRCF ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /files/products/csv/standard ... done.
+==> PASV ... done.    ==> LIST ... done.
+
+     0K .......... .......... ...                               618K=0,04s
+
+2017-04-04 13:47:57 (618 KB/s) - ‘www.dropshippers.com.es/files/products/csv/standard/.listing’ saved [24143]
+
+Remote file no newer than local file ‘www.dropshippers.com.es/files/products/csv/standard/product_2399_es.csv’ -- not retrieving.
+FINISHED --2017-04-04 13:47:57--
+Total wall clock time: 0,9s
+Downloaded: 1 files, 24K in 0,04s (618 KB/s)

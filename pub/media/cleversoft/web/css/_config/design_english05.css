@@ -1,0 +1,76 @@
+.pri_color { color:#ff4081 !important; }
+.pri_color_bg { background-color:#ff4081 !important; }
+a { color:#3b3b3b; }
+a:hover { color:#ff4081; }
+body {
+  color:#393939;
+  font-size:14px;
+}
+button, .button {
+  background-color:#a1a1a1;
+  color:#ffffff;
+  border-color:rgba(0,0,0,0);
+}
+button:hover, .button:hover {
+  background-color:#333333;
+  color:#ffffff;
+  border-color:rgba(0,0,0,0);
+}
+.btn {
+  background-color:#a1a1a1 !important;
+  color:#ffffff !important;
+  border-color:rgba(0,0,0,0) !important;
+}
+.btn:hover {
+  background-color:#333333 !important;
+  color:#ffffff !important;
+  border-color:rgba(0,0,0,0) !important;
+}
+.price { color:#999999; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color:#333333; }
+.page-header .panel.wrapper { background-color:#3e2723; }
+.page-header { background-color:#ffffff; }
+.page-header { color:#333333; }
+.header.panel > .header.links > li > a:visited, .page-header a { color:#333333; }
+.header.panel > .header.links > li > a:hover, .page-header a:hover { color:#ff4081; }
+#mtnav a {
+  font-size:14px;
+  text-transform:none;
+}
+.page-wrapper .nav-sections { background-color:#3f51b5; }
+.is-sticky  #mt-sticky-header { background-color:#3f51b5; }
+#mtnav li.level0 { background-color:rgba(0,0,0,0); }
+#mtnav li.level0:hover { background-color:rgba(0,0,0,0); }
+#mtnav li a { color:#333333; }
+#mtnav li a:hover { color:#ff4081; }
+.mt-menu { background-color:#2d2d2d; }
+.title-canvas { color:#ffffff; }
+.mt-menu a { background-color:rgba(0,0,0,0); }
+.mt-menu a:hover { background-color:#3f3f3f; }
+.mt-menu ul.nav-accordion li a { color:#ffffff; }
+.mt-menu ul.nav-accordion li a:hover { color:#ffffff; }
+.mt-navigation-vertical .block-title {
+  background-color:#3f51b5;
+  color:#666666;
+}
+.mt-main-menu-vertical .megamenu-vertical li a { color:#666666; }
+.mt-main-menu-vertical .megamenu-vertical li a:hover { color:#ffffff; }
+body { background-color:#ffffff; }
+.main-container { background-color:#ffffff; }
+.page-footer .footer-top {
+  color:#ffffff;
+  background-color:#f4f4f4;
+}
+.page-footer .footer-top a { color:#0172ff; }
+.page-footer .footer-top a:hover { color:#0066e6; }
+.page-footer {
+  color:#999999;
+  background-color:#ffffff;
+}
+.page-footer a { color:#999999; }
+.page-footer a:hover { color:#ff4081; }
+.page-wrapper .copyright {
+  background-color:#ffffff;
+  color:#999999;
+}
+.page-wrapper .copyright a { color:#ff4081; }

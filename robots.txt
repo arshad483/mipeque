@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /
+
+
+Sitemap: https://www.mipeque.shop/sitemap.xml
+Sitemap: https://www.mipeque.shop/magento/sitemap.xml
